@@ -1,10 +1,6 @@
-/**
- * 
- */
-/**
- * 
- */
-module EpsonManager {
-	requires javafx.graphics;
+module LyriumPrinter {
+	requires transitive javafx.graphics;
 	requires java.desktop;
+	
+	exports application.start;
 }
