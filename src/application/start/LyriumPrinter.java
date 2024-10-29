@@ -1,6 +1,8 @@
 package application.start;
 
 
+import application.components.LyriumPrinterComponentsImpl;
+import application.components.interfaces.LyriumPrinterComponents;
 import application.utils.ResourceLoader;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -20,7 +22,8 @@ public class LyriumPrinter extends Application {
 		stage.getIcons().add(ResourceLoader.loadImage("/images/printer.png", LyriumPrinter.class));
 		stage.getStyle();
 		stage.setResizable(false);
-		
+		LyriumPrinterComponents componentsUi = new LyriumPrinterComponentsImpl();
+		componentsUi.initializeUi(stage);
 		
 		stage.show();
 		
