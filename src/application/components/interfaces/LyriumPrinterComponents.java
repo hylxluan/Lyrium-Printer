@@ -1,5 +1,7 @@
 package application.components.interfaces;
 
+import java.util.ServiceLoader;
+
 import javafx.stage.Stage;
 
 public interface LyriumPrinterComponents {
@@ -14,4 +16,8 @@ public interface LyriumPrinterComponents {
 	
 	void createNozzleCheckButton();
 	
+	
+	static LyriumPrinterComponents createServiceLoader() {
+		return ServiceLoader.load(LyriumPrinterComponents.class).findFirst().get();
+	}
 }
