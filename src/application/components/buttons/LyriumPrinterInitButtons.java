@@ -71,5 +71,50 @@ public class LyriumPrinterInitButtons {
 		return nozzleCheckButton;
 	}
 	
+	
+	public static Button createRollerCleaningButton(Button rollerCleaningButton) {
+		
+		rollerCleaningButton = new Button("Limpeza de Rolos");
+		rollerCleaningButton.setMaxWidth(210);
+		rollerCleaningButton.setMinWidth(210);
+		rollerCleaningButton.setMaxHeight(60);
+		rollerCleaningButton.setMinHeight(60);
+		rollerCleaningButton.setScaleY(1.0);
+		rollerCleaningButton.setScaleX(1.0);
+		rollerCleaningButton.getStyleClass().add("roller-cleaning-button");
+		
+		return rollerCleaningButton;
+	}
+	
+	
+	public static Button createHeadCleaningButton(Button headCleaningButton) {
+		
+		headCleaningButton = new Button("Limpeza de Cabeçotes");
+		headCleaningButton.setMaxWidth(210);
+		headCleaningButton.setMinWidth(210);
+		headCleaningButton.setMaxHeight(60);
+		headCleaningButton.setMinHeight(60);
+		headCleaningButton.setScaleY(1.0);
+		headCleaningButton.setScaleX(1.0);
+		headCleaningButton.getStyleClass().add("head-cleaning-button");
+		
+		return headCleaningButton;
+	}
+	
+	
+	public static Button createDeepCleaningButton(Button deepCleaningButton) {
+		
+		deepCleaningButton = new Button("Limpeza Profunda");
+		deepCleaningButton.setMaxWidth(210);
+		deepCleaningButton.setMinWidth(210);
+		deepCleaningButton.setMaxHeight(60);
+		deepCleaningButton.setMinHeight(60);
+		deepCleaningButton.setScaleY(1.0);
+		deepCleaningButton.setScaleX(1.0);
+		deepCleaningButton.getStyleClass().add("deep-cleaning-button");
+		
+		return deepCleaningButton;
+	}
+	
 
 }
