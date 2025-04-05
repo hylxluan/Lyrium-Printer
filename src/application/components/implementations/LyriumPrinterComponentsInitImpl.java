@@ -3,9 +3,15 @@ package application.components.implementations;
 
 import static application.components.buttons.LyriumPrinterInitButtons.*;
 import application.components.interfaces.LyriumPrinterComponents;
+import application.utils.ResourceLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -35,15 +41,13 @@ public class LyriumPrinterComponentsInitImpl implements LyriumPrinterComponents 
 		 * 
 		 * */
 		
-		searchPrinterButton = createSearchButton(searchPrinterButton);
-		
 		this.scene = new Scene(rootPanel, 800, 500);
 		this.scene.getStylesheets().add(getClass().getResource("/styles/application.css").toExternalForm());
 		
 		
-		printDocButton = createPrintDocButton(printDocButton);
-		headAlignmentButton = createHeadAlignmentButton(headAlignmentButton);
-		nozzleCheckButton = createNozzleCheckButton(nozzleCheckButton);
+		this.printDocButton = createPrintDocButton(printDocButton);
+		this.headAlignmentButton = createHeadAlignmentButton(headAlignmentButton);
+		this.nozzleCheckButton = createNozzleCheckButton(nozzleCheckButton);
 		
 		leftVBox.setAlignment(Pos.CENTER_LEFT);
 		leftVBox.getChildren().addAll(this.printDocButton,
@@ -54,9 +58,9 @@ public class LyriumPrinterComponentsInitImpl implements LyriumPrinterComponents 
 		VBox.setMargin(this.headAlignmentButton, new Insets(10, 0, 10, 10));
 		VBox.setMargin(this.nozzleCheckButton, new Insets(10, 0, 10, 10));
 		
-		rollerCleaningButton = createRollerCleaningButton(rollerCleaningButton);
-		headCleaningButton = createHeadCleaningButton(headCleaningButton);
-		deepCleaningButton = createDeepCleaningButton(deepCleaningButton);
+		this.rollerCleaningButton = createRollerCleaningButton(rollerCleaningButton);
+		this.headCleaningButton = createHeadCleaningButton(headCleaningButton);
+		this.deepCleaningButton = createDeepCleaningButton(deepCleaningButton);
 		
 		rightVBox.setAlignment(Pos.CENTER_RIGHT);
 		rightVBox.getChildren().addAll(this.rollerCleaningButton,
@@ -67,10 +71,22 @@ public class LyriumPrinterComponentsInitImpl implements LyriumPrinterComponents 
 		VBox.setMargin(this.headCleaningButton, new Insets(10, 10, 10, 0));
 		VBox.setMargin(this.deepCleaningButton, new Insets(10, 10, 10, 0));
 		
+		this.searchPrinterButton = createSearchButton(searchPrinterButton);
+		
 		rootPanel.setLeft(leftVBox);
 		rootPanel.setRight(rightVBox);
 		rootPanel.setCenter(searchPrinterButton);
 		BorderPane.setMargin(searchPrinterButton, new Insets(325, 0, 0, 0));
+		BackgroundImage backgroundImage = new BackgroundImage(
+				
+						ResourceLoader.loadImage("/images/background wallpaper.png", 
+								LyriumPrinterComponentsInitImpl.class), 
+						BackgroundRepeat.NO_REPEAT, 
+						BackgroundRepeat.NO_REPEAT, 
+						BackgroundPosition.CENTER, 
+						new BackgroundSize(100, 100, true, true, false, true));
+		
+		rootPanel.setBackground(new Background(backgroundImage));
 		rootPanel.getStyleClass().add("scene");
 		stage.setScene(this.scene);
 		
