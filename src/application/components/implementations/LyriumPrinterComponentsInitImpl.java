@@ -61,7 +61,7 @@ public class LyriumPrinterComponentsInitImpl implements LyriumPrinterComponents 
 		rightVBox.setAlignment(Pos.CENTER_RIGHT);
 		rightVBox.getChildren().addAll(this.rollerCleaningButton,
 									   this.headCleaningButton,
-									   deepCleaningButton);
+									   this.deepCleaningButton);
 		
 		VBox.setMargin(this.rollerCleaningButton, new Insets(10, 10, 10, 0));
 		VBox.setMargin(this.headCleaningButton, new Insets(10, 10, 10, 0));
@@ -70,7 +70,7 @@ public class LyriumPrinterComponentsInitImpl implements LyriumPrinterComponents 
 		rootPanel.setLeft(leftVBox);
 		rootPanel.setRight(rightVBox);
 		rootPanel.setCenter(searchPrinterButton);
-		BorderPane.setMargin(searchPrinterButton, new Insets(250, 0, 0, 0));
+		BorderPane.setMargin(searchPrinterButton, new Insets(325, 0, 0, 0));
 		rootPanel.getStyleClass().add("scene");
 		stage.setScene(this.scene);
 		
