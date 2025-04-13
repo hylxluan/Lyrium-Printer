@@ -1,10 +1,4 @@
-import application.components.implementations.LyriumPrinterComponentsInitImpl;
-import application.components.interfaces.LyriumPrinterComponents;
-
 module LyriumPrinter {
-	
-	uses LyriumPrinterComponents;
-	provides LyriumPrinterComponents with LyriumPrinterComponentsInitImpl;
 	
 	requires transitive javafx.graphics;
 	requires java.desktop;
