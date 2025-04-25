@@ -1,13 +1,16 @@
 package application.manager.handler;
 
-import application.components.implementations.LyriumPrinterComponentsInitImpl;
+import application.components.interfaces.LyriumPrinterComponents;
 import application.manager.interfaces.PrinterManager;
 
 public class PrinterManagerHandler implements PrinterManager {
 	
-	private LyriumPrinterComponentsInitImpl components;
+	private LyriumPrinterComponents components;
 
-	private void initializeManager(LyriumPrinterComponentsInitImpl components) {
+	
+
+	@Override
+	public void initializeManager(LyriumPrinterComponents components) {
 		this.components = components;
 	}
 	
@@ -15,6 +18,5 @@ public class PrinterManagerHandler implements PrinterManager {
 	public void handlePrinterManager() {
 		
 	}
-	
 	
 }
