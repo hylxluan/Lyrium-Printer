@@ -1,21 +1,20 @@
 package application.manager.handler;
 
-import application.components.interfaces.LyriumPrinterComponents;
-import application.manager.interfaces.PrinterManager;
+import application.components.implementations.LyriumPrinterComponentsInitImpl;
+import application.manager.interfaces.PrinterHandler;
 
-public class PrinterManagerHandler implements PrinterManager {
+public class PrinterManagerHandler implements PrinterHandler {
 	
-	private LyriumPrinterComponents components;
+	private LyriumPrinterComponentsInitImpl components;
 
-	
 
 	@Override
-	public void initializeManager(LyriumPrinterComponents components) {
+	public void initHandler(LyriumPrinterComponentsInitImpl components) {
 		this.components = components;
+		dragAndDropFieldHandler();
 	}
 	
-	@Override
-	public void handlePrinterManager() {
+	private void dragAndDropFieldHandler() {
 		
 	}
 	

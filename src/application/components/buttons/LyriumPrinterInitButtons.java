@@ -1,7 +1,7 @@
 package application.components.buttons;
 
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.TextArea;
 
 
 public class LyriumPrinterInitButtons {
@@ -13,12 +13,11 @@ public class LyriumPrinterInitButtons {
 	
 	
 	public static Button createSearchButton(Button searchPrinterButton) {
-		
 		searchPrinterButton = new Button("Procurar Impressora");
-		searchPrinterButton.setMaxWidth(230);
-		searchPrinterButton.setMinWidth(230);
-		searchPrinterButton.setMaxHeight(60);
-		searchPrinterButton.setMinHeight(60);
+		searchPrinterButton.setMaxWidth(220);
+		searchPrinterButton.setMinWidth(220);
+		searchPrinterButton.setMaxHeight(80);
+		searchPrinterButton.setMinHeight(80);
 		searchPrinterButton.setScaleY(1.0);
 		searchPrinterButton.setScaleX(1.0);
 		searchPrinterButton.getStyleClass().add("search-button");
@@ -30,10 +29,10 @@ public class LyriumPrinterInitButtons {
 	public static Button createPrintDocButton(Button printDocButton) {
 		
 		printDocButton = new Button("Imprimir Documento");
-		printDocButton.setMaxWidth(230);
-		printDocButton.setMinWidth(230);
-		printDocButton.setMaxHeight(60);
-		printDocButton.setMinHeight(60);
+		printDocButton.setMaxWidth(220);
+		printDocButton.setMinWidth(220);
+		printDocButton.setMaxHeight(80);
+		printDocButton.setMinHeight(80);
 		printDocButton.setScaleY(1.0);
 		printDocButton.setScaleX(1.0);
 		printDocButton.getStyleClass().add("print-doc-button");
@@ -41,79 +40,35 @@ public class LyriumPrinterInitButtons {
 		return printDocButton;
 	}
 	
-	
-	public static Button createHeadAlignmentButton(Button headAlignmentButton) {
+
+	public static Button createPrinterStatusButton(Button printerStatusButton) {
 		
-		headAlignmentButton = new Button("Alinhamento do Cabeçote");
-		headAlignmentButton.setMaxWidth(230);
-		headAlignmentButton.setMinWidth(230);
-		headAlignmentButton.setMaxHeight(60);
-		headAlignmentButton.setMinHeight(60);
-		headAlignmentButton.setScaleY(1.0);
-		headAlignmentButton.setScaleX(1.0);
-		headAlignmentButton.getStyleClass().add("head-alignment-button");
+		printerStatusButton = new Button("Checar Status");
+		printerStatusButton.setMaxWidth(220);
+		printerStatusButton.setMinWidth(220);
+		printerStatusButton.setMaxHeight(80);
+		printerStatusButton.setMinHeight(80);
+		printerStatusButton.setScaleY(1.0);
+		printerStatusButton.setScaleX(1.0);
+		printerStatusButton.getStyleClass().add("printer-status-button");
 		
-		return headAlignmentButton;
+		return printerStatusButton;
 	}
 	
-	
-	public static Button createNozzleCheckButton(Button nozzleCheckButton) {
+	public static TextArea createDragAndDropField(TextArea dragAndDropField) {
 		
-		nozzleCheckButton = new Button("Verificação Dos Jatos");
-		nozzleCheckButton.setMaxWidth(230);
-		nozzleCheckButton.setMinWidth(230);
-		nozzleCheckButton.setMaxHeight(60);
-		nozzleCheckButton.setMinHeight(60);
-		nozzleCheckButton.setScaleY(1.0);
-		nozzleCheckButton.setScaleX(1.0);
-		nozzleCheckButton.getStyleClass().add("nozzle-check-button");
+		dragAndDropField = new TextArea();
+		//dragAndDropField.setEditable(false);
+		//dragAndDropField.setCursor(Cursor.DEFAULT);
+		dragAndDropField.setMaxWidth(260);
+		dragAndDropField.setMinWidth(260);
+		dragAndDropField.setMaxHeight(200);
+		dragAndDropField.setMinHeight(200);
+		dragAndDropField.setScaleY(1.0);
+		dragAndDropField.setScaleX(1.0);
+		dragAndDropField.getStyleClass().add("drag-and-drop-textarea");
 		
-		return nozzleCheckButton;
-	}
-	
-	
-	public static Button createRollerCleaningButton(Button rollerCleaningButton) {
-		
-		rollerCleaningButton = new Button("Limpeza de Rolos");
-		rollerCleaningButton.setMaxWidth(230);
-		rollerCleaningButton.setMinWidth(230);
-		rollerCleaningButton.setMaxHeight(60);
-		rollerCleaningButton.setMinHeight(60);
-		rollerCleaningButton.setScaleY(1.0);
-		rollerCleaningButton.setScaleX(1.0);
-		rollerCleaningButton.getStyleClass().add("roller-cleaning-button");
-		
-		return rollerCleaningButton;
-	}
-	
-	
-	public static Button createHeadCleaningButton(Button headCleaningButton) {
-		
-		headCleaningButton = new Button("Limpeza de Cabeçotes");
-		headCleaningButton.setMaxWidth(230);
-		headCleaningButton.setMinWidth(230);
-		headCleaningButton.setMaxHeight(60);
-		headCleaningButton.setMinHeight(60);
-		headCleaningButton.setScaleY(1.0);
-		headCleaningButton.setScaleX(1.0);
-		headCleaningButton.getStyleClass().add("head-cleaning-button");
-		
-		return headCleaningButton;
-	}
-	
-	
-	public static Button createDeepCleaningButton(Button deepCleaningButton) {
-		
-		deepCleaningButton = new Button("Limpeza Profunda");
-		deepCleaningButton.setMaxWidth(230);
-		deepCleaningButton.setMinWidth(230);
-		deepCleaningButton.setMaxHeight(60);
-		deepCleaningButton.setMinHeight(60);
-		deepCleaningButton.setScaleY(1.0);
-		deepCleaningButton.setScaleX(1.0);
-		deepCleaningButton.getStyleClass().add("deep-cleaning-button");
-		
-		return deepCleaningButton;
+		return dragAndDropField;
 	}
 	
 

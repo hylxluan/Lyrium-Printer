@@ -4,7 +4,7 @@ package application.start;
 import application.components.implementations.LyriumPrinterComponentsInitImpl;
 import application.components.interfaces.LyriumPrinterComponents;
 import application.manager.handler.PrinterManagerHandler;
-import application.manager.interfaces.PrinterManager;
+import application.manager.interfaces.PrinterHandler;
 
 import static application.utils.ResourceLoader.*;
 import javafx.application.Application;
@@ -29,8 +29,6 @@ public class LyriumPrinter extends Application {
 		LyriumPrinterComponents componentsUi = new LyriumPrinterComponentsInitImpl();
 		componentsUi.initializeUi(stage);
 		
-		PrinterManager printerManager = new PrinterManagerHandler();
-		printerManager.initializeManager(componentsUi);
 		
 		stage.show();
 		
