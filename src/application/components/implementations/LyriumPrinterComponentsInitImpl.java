@@ -13,6 +13,7 @@ import application.manager.interfaces.PrinterHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
@@ -29,7 +30,7 @@ public class LyriumPrinterComponentsInitImpl implements LyriumPrinterComponents 
 	
 	private BorderPane rootPanel;
 	private Scene scene;
-	private TextArea dragAndDropField;
+	private Label dragAndDropField;
 	private Button searchPrinterButton,  printDocButton,
 								printerStatusButton;
 
@@ -45,8 +46,8 @@ public class LyriumPrinterComponentsInitImpl implements LyriumPrinterComponents 
 		
 		initButtons();
 		
-		PrinterHandler handlerUi = new PrinterManagerHandler();
-		handlerUi.initHandler(this);
+		PrinterHandler handlerUi = new PrinterManagerHandler(this);
+		handlerUi.initHandler();
 		
 		this.rootPanel.setCenter(this.searchPrinterButton);
 		this.rootPanel.setTop(this.dragAndDropField);
@@ -103,12 +104,12 @@ public class LyriumPrinterComponentsInitImpl implements LyriumPrinterComponents 
 	}
 
 
-	public TextArea getDragAndDropField() {
+	public Label getDragAndDropField() {
 		return dragAndDropField;
 	}
 
 
-	public void setDragAndDropField(TextArea dragAndDropField) {
+	public void setDragAndDropField(Label dragAndDropField) {
 		this.dragAndDropField = dragAndDropField;
 	}
 
@@ -141,6 +142,5 @@ public class LyriumPrinterComponentsInitImpl implements LyriumPrinterComponents 
 	public void setPrinterStatusButton(Button printerStatusButton) {
 		this.printerStatusButton = printerStatusButton;
 	}
-	
 	
 }

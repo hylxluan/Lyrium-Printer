@@ -35,10 +35,12 @@
 	-fx-background-radius: 60;
 }
 
-.drag-and-drop-textarea {
-	-fx-font-size: 110%;
-	-fx-font-family: 'Arial', sans-serif;
-	-fx-background-radius: 4px;
-	-fx-border-color: #273B73;
-	-fx-border-radius: 4px;
+.drag-and-drop-Label {
+	-fx-border-color: gray;
+    -fx-border-style: dashed;
+    -fx-border-width: 2;
+    -fx-alignment: center;
+    -fx-padding: 40;
+    -fx-font-size: 14px;
+    -fx-background-color: white;
 }

@@ -1,7 +1,7 @@
 package application.components.buttons;
 
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.Label;
 
 
 public class LyriumPrinterInitButtons {
@@ -55,18 +55,16 @@ public class LyriumPrinterInitButtons {
 		return printerStatusButton;
 	}
 	
-	public static TextArea createDragAndDropField(TextArea dragAndDropField) {
+	public static Label createDragAndDropField(Label dragAndDropField) {
 		
-		dragAndDropField = new TextArea();
-		//dragAndDropField.setEditable(false);
-		//dragAndDropField.setCursor(Cursor.DEFAULT);
+		dragAndDropField = new Label("Arraste aqui para imprimir!");
 		dragAndDropField.setMaxWidth(260);
 		dragAndDropField.setMinWidth(260);
 		dragAndDropField.setMaxHeight(200);
 		dragAndDropField.setMinHeight(200);
 		dragAndDropField.setScaleY(1.0);
 		dragAndDropField.setScaleX(1.0);
-		dragAndDropField.getStyleClass().add("drag-and-drop-textarea");
+		dragAndDropField.getStyleClass().add("drag-and-drop-Label");
 		
 		return dragAndDropField;
 	}
